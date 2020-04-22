@@ -1,4 +1,5 @@
 # !/usr/bin/env python3
+
 from math import pi
 import math,copy
 from collections import deque
@@ -565,35 +566,103 @@ import unicodedata
 #     print("Positive")
 
 # Python 判断字符串是否为数字
-def is_number(s):
-    try:
-        float(s)
-        return True
-    except(TypeError,ValueError):
-        pass
-        # print("Error")
+# def is_number(s):
+#     try:
+#         float(s)
+#         return True
+#     except(TypeError,ValueError):
+#         pass
+#         # print("Error")
 
-    try:
-        import unicodedata
-        print(s)
-        unicodedata.numeric(s)
-        print(s)
-        return True
-    except(TypeError,ValueError):
-        pass
-    return False
+#     try:
+#         import unicodedata
+#         print(s)
+#         unicodedata.numeric(s)
+#         print(s)
+#         return True
+#     except(TypeError,ValueError):
+#         pass
+#     return False
 
-print(is_number('四'))
-print(is_number('1'))
-print(is_number('foo'))
-print(is_number('1.3'))     #因为是float啊！！！！
-print(is_number('-1.37'))   #因为是float啊！！！！
-print(is_number('1e3'))     #因为是float啊！！！！
+# print(is_number('四'))
+# print(is_number('1'))
+# print(is_number('foo'))
+# print(is_number('1.3'))     #因为是float啊！！！！
+# print(is_number('-1.37'))   #因为是float啊！！！！
+# print(is_number('1e3'))     #因为是float啊！！！！
 
 # Python 判断奇数偶数
+# num = int(input("请输入一个大于等于0的整数：\n"))
+# if num%2 == 0:
+#     print("Even")
+# elif num%2 != 0:
+#     print("odd")
+# else:
+#     print("Wrong type")
+
 # Python 判断闰年
+# 整百年能被400整除的是闰年
+# 非整百年能被4整除的是闰年
+# num = int(input("请输入一个年份：\n"))
+# if num%100 == 0:
+#     if num%400 == 0:
+#         print("闰年Leap year")
+#     else:
+#         print("不是闰年Leap year")
+# elif num%4 == 0:
+#     print("闰年Leap year")
+# else:
+#     print("不是闰年Leap year")
+
 # Python 获取最大值函数
+# numlist = [0,0,0,0,0]
+# 方法一
+# for i in range(len(numlist)):
+#     numlist[i] = int(input("请输入数字:\n"))
+# print(numlist)
+# print(max(numlist))
+# 方法二
+# def getmax(list):
+#     for x in range(len(list)):
+#         for y in range(len(list)-x-1):
+#             if list[y] > list[y+1]:
+#                 list[y],list[y+1] = list[y+1],list[y]
+#     return(list)
+# for i in range(len(numlist)):
+#     numlist[i] = int(input("请输入数字:\n"))
+# print("原始的列表是：{0}".format(numlist))
+# print("排序后的列表是: {0}".format(getmax(numlist)))
+# print("最大值是: {0}".format(numlist[len(numlist)-1]))
+
 # Python 质数判断
+# 一个大于1的自然数，除了1和它本身以外不再有其他的因数
+# num = int(input("请输入数字进行判断:\n"))
+# if num > 1:
+#     for i in range(2,num):
+#         if (num % i) == 0:
+#             print("{0}不是质数".format(num))
+#             print("{0} x {1} = {2}".format(i,num//i,num))        #整除
+#             break
+#     else:
+#         print("{0}是质数".format(num))
+# else:
+#     print("既不是质数也不是合数")
+
+# 输出100以内的质数
+temp,result = [],[]
+for a in range(2,101):
+    temp.append(a)
+
+for i in temp:
+    for j in range(2,i):
+        if i % j == 0:
+            print(j)
+            break
+    else:
+        result.append(i)
+print("Temp:", temp)
+print("Result:", result)
+
 # Python 输出指定范围内的素数
 # Python 阶乘实例
 # Python 九九乘法表
