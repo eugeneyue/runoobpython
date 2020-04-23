@@ -649,29 +649,92 @@ import unicodedata
 #     print("既不是质数也不是合数")
 
 # 输出100以内的质数
-temp,result = [],[]
-for a in range(2,101):
-    temp.append(a)
+# temp,result = [],[]
+# for a in range(2,101):
+#     temp.append(a)
 
-for i in temp:
-    for j in range(2,i):
-        if i % j == 0:
-            print(j)
-            break
-    else:
-        result.append(i)
-        """
-        当迭代对象完成所有迭代后且此时的迭代对象为空时，如果存在else子句则执行else子句，没有则继续执行后续代码；
-        如果迭代对象因为某种原因（如带有break关键字）提前退出迭代，则else子句不会被执行，程序将会直接跳过else子句继续执行后续代码
-        """
-print("Temp:", temp)
-print("Result:", result)
+# for i in temp:
+#     for j in range(2,i):
+#         if i % j == 0:
+#             print(j)
+#             break
+#     else:
+#         result.append(i)
+#         """
+#         当迭代对象完成所有迭代后且此时的迭代对象为空时，如果存在else子句则执行else子句，没有则继续执行后续代码；
+#         如果迭代对象因为某种原因（如带有break关键字）提前退出迭代，则else子句不会被执行，程序将会直接跳过else子句继续执行后续代码
+#         """
+# print("Temp:", temp)
+# print("Result:", result)
 
 # Python 输出指定范围内的素数
+# temp,result = [],[]
+# start = int(input("请设置起始（大于1的整数）：\n"))
+# finish = int(input("请设置结束（大于1的整数且不小于起始）：\n"))
+# while start<=finish:
+#     for a in range(start,finish+1):
+#         temp.append(a)
+
+#     for i in temp:
+#         for j in range(start,i):
+#             if i % j == 0:
+#                 break
+#         else:
+#             result.append(i)
+#             """
+#             当迭代对象完成所有迭代后且此时的迭代对象为空时，如果存在else子句则执行else子句，没有则继续执行后续代码；
+#             如果迭代对象因为某种原因（如带有break关键字）提前退出迭代，则else子句不会被执行，程序将会直接跳过else子句继续执行后续代码
+#             """
+#     print("结果:", result)
+#     break
+# else:
+#     print("请输入正确的范围！")
+
 # Python 阶乘实例
+# print("***本代码提供阶乘计算服务***")
+# num = int(input("请输入要进行计算的整数： "))
+# result = 1
+# for i in range(1,num+1):
+#     result *= i
+# print("结果是：{0}".format(result))
+
 # Python 九九乘法表
+# 方法一：
+# for i in range(1,10):
+#     for j in range(1,10):
+#         print("{0}*{1}={2} ".format(i,j,i*j),end=" ")
+#     print('\n')
+# 方法二：
+# for i in range(1,10):
+#     for j in range(1,i+1):
+#         print("{0}*{1}={2} ".format(i,j,i*j),end=" ")
+#     print('\n')
+
 # Python 斐波那契数列
+# print("***本代码输出100以内的Fibonacci***")
+# a,b,i = 0,1,0
+# while i <= 100:
+#     print("%d" % a,end=" ")
+#     a,b,i = b,a+b,a
+# print("***本代码输出10项Fibonacci***")
+# a,b = 0,1
+# for i in range(10):
+#     print("%d" % a,end=" ")
+#     a,b = b,a+b
+
 # Python 阿姆斯特朗数
+# 如果一个n位正整数等于其各位数字的n次方之和,则称该数为阿姆斯特朗数。
+# print("***本代码输出1000以内的阿姆斯特朗数***")
+# sum = 0
+# for i in range(1,10001):
+#     temp = str(i)
+#     length = len(temp)
+#     for j in temp:
+#         sum += int(j)**length
+#     if sum == i:
+#         print(i,end=" ")
+#     sum = 0
+
 # Python 十进制转二进制、八进制、十六进制
 # Python ASCII码与字符相互转换
 # Python 最大公约数算法
