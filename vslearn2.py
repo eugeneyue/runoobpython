@@ -10,6 +10,7 @@ import fibo
 from datetime import date
 import random
 import unicodedata
+import calendar
 
 # def area(length=0,height=0):
 #     return int(length)*int(height)
@@ -736,12 +737,88 @@ import unicodedata
 #     sum = 0
 
 # Python 十进制转二进制、八进制、十六进制
+# print("***本代码输出进制转换结果***")
+# dec1 = int(input("请输入一个十进制数： "))
+# print("对应的十进制是：", dec1)
+# print("对应的二进制是：", bin(dec1))
+# print("对应的八进制是：", oct(dec1))
+# print("对应的十六进制是：", hex(dec1))
+
 # Python ASCII码与字符相互转换
+# list1,list2,list3 = [],[],[]
+# for i in range(11):
+#     list1.append(i)
+# for j in list1:
+#     list2.append(chr(j))
+# print(list2)
+# for k in list2:
+#     list3.append(ord(k))
+# print(list3)
+
 # Python 最大公约数算法
+# 最大公约数指两个或多个整数共有约数中最大的一个
+# 辗转相除法
+# a = int(input("请输入一个正整数："))
+# b = int(input("请再输入一个正整数："))
+# def zdgys(a,b):
+#     while a%b != 0:
+#         a,b = b,a%b
+#     print("最大公约数是{0}".format(b))
+# if a < b:
+#     a,b = b,a
+#     zdgys(a,b)
+# elif a == b:
+#     print("最大公约数是{0}".format(a))
+# else:
+#     zdgys(a,b)
+
 # Python 最小公倍数算法
+# 两个或多个整数公有的倍数叫做它们的公倍数，其中除0以外最小的一个公倍数就叫做这几个整数的最小公倍数。甲、乙两数的积一定等于甲、乙两数的最大公因数与最小公倍数的积。
+# a = int(input("请输入一个正整数："))
+# b = int(input("请再输入一个正整数："))
+# def zdgys(a,b):
+#     while a%b != 0:
+#         a,b = b,a%b
+#     return b
+# result = a*b//zdgys(a,b)
+# print("最小公倍数是：{0}".format(result))
+
 # Python 简单计算器实现
+# def add(x,y):
+#     return x+y
+# def sub(x,y):
+#     return x-y
+# def multi(x,y):
+#     return x*y
+# def div(x,y):
+#     if y == 0:
+#         return "分母不能为0"
+#     else:
+#         return x/y
+# print("***请选择加减乘除其中一个计算方法***\n")
+# print("加1减2乘3除4\n")
+# choice = int(input("请输入对应数字："))
+# a = int(input("请输入一个数："))
+# b = int(input("请再输入一个数："))
+# if choice == 1:
+#     print(add(a,b))
+# elif choice == 2:
+#     print(sub(a,b))
+# elif choice == 3:
+#     print(multi(a,b))
+# elif choice == 4:
+#     print(div(a,b))
+# else:
+#     print("1234")
+
 # Python 生成日历
+# a = int(input("请输入年份："))
+# b = int(input("请再输入月份："))
+# print('\n')
+# print(calendar.month(a,b))
+
 # Python 使用递归斐波那契数列
+
 # Python 文件 IO
 # Python 字符串判断
 # Python 字符串大小写转换
