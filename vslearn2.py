@@ -7,7 +7,8 @@ import sys
 #from fibo import fib,fib2
 #from fibo import *
 import fibo
-from datetime import date
+# from datetime import date
+import datetime
 import random
 import unicodedata
 import calendar
@@ -832,13 +833,68 @@ import calendar
 
 # Python 文件 IO
 # with open(r'C:\Users\gtxcdn2\Desktop\runoob\foo.txt','a+') as target:
-#     # print(target.read())
 #     target.write('\ntest0424')
+#     target.seek(0)                 # 要把指针重置为文件头部
+#     print("read1: ", target.read())
+#     target.write('\ntest04241')
+#     target.seek(0)                 # 要把指针重置为文件头部
+#     print("read2: ",target.read())
 
 # Python 字符串判断
+# str = "Runoob"
+# str1 = '\n'
+# print(str.isalnum())
+# print(str.isalpha())
+# print(str.isdigit())
+# print(str.islower())
+# print(str.isupper())
+# print(str.istitle())
+# print(str1.isspace())
+
 # Python 字符串大小写转换
-# Python 计算每个月天数
-# Python 获取昨天日期
+# inputstring = str(input("请输入一串字符串："))
+# allupper = inputstring.upper()
+# print("全大写：",allupper)
+# alllower = inputstring.lower()
+# print("全小写",alllower)
+# capitalized = inputstring.capitalize()
+# print("首字母大写：",capitalized)
+# titled = inputstring.title()
+# print("将每个单词的首字母大写：",titled)
+
+# Python 计算某年的某个月天数
+# y = int(input("请输入年份："))
+# m = int(input("请输入月份："))
+# print("年份是：{0}年，月份是：{1}月，当月的天数是：{2}天".format(y,m,calendar.monthrange(1994,12)[1]))
+
+# Python 计算每个月的天数
+# print(calendar.mdays)
+
+# Python 获取昨天的日期
+# now = datetime.date.today()
+# yes = datetime.timedelta(-1)      # 差-1天
+# result = now + yes
+# print(result)
+
+# Python 获取上个月的第一天和最后一天
+# 自己答的
+# now = datetime.date.today()
+# mon = int(str(now)[5:7])    # 获取到的月份为list的月份所对应
+# year,mon1 = str(now)[0:4],str(now)[5:7]
+# list = calendar.mdays
+# if mon-1 <= 0:
+#     mon += 12
+#     print("上个月的第一天是：{0}月1号".format(int(mon1)-1))
+#     print("上个月的最后一天是：{0}月{1}号".format(int(mon1)-1,list[mon-1]))
+# else:
+#     print("上个月的第一天是：{0}月1号".format(int(mon1)-1))
+#     print("上个月的最后一天是：{0}月{1}号".format(int(mon1)-1,list[mon-1]))
+# 网上答案
+# now = datetime.date.today()
+# first = now.replace(day=1)
+# pre = first - datetime.timedelta(days=1)
+# print("上个月的最后一天是：", pre)
+
 # Python list 常用操作
 # Python 约瑟夫生者死者小游戏
 # Python 五人分鱼
