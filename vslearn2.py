@@ -817,9 +817,24 @@ import calendar
 # print('\n')
 # print(calendar.month(a,b))
 
-# Python 使用递归斐波那契数列
+# Python 使用递归斐波那契数列 - 递归非常的浪费性能
+# def recur_fibonacci(n):
+#     if n <= 1:
+#         return n
+#     else:
+#         return(recur_fibonacci(n-1) + recur_fibonacci(n-2)) # 计算上一项和上上项的和
+# num = int(input("请输入要输出几项: "))
+# if num <= 0:
+#     print("请输入大于0的整数")
+# else:
+#     for i in range(num):
+#         print(recur_fibonacci(i),end=" ")
 
 # Python 文件 IO
+# with open(r'C:\Users\gtxcdn2\Desktop\runoob\foo.txt','a+') as target:
+#     # print(target.read())
+#     target.write('\ntest0424')
+
 # Python 字符串判断
 # Python 字符串大小写转换
 # Python 计算每个月天数
