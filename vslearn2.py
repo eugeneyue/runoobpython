@@ -989,13 +989,13 @@ e = (d - 1)/5    最后一个人的鱼的数量能支撑x-1%5=0
 
 # Python 实现秒表功能
 # Python 计算 n 个自然数的立方和
-n = int(input("请输入要输入的自然数的数量："))
-list,sum = [],0
-for i in range(n):
-    list.append(int(input("请输入第{0}个数字：".format(i+1))))
-for j in list:
-    sum += j**3
-print("所有数字的立方和为{0}".format(sum))
+# n = int(input("请输入要输入的自然数的数量："))
+# list,sum = [],0
+# for i in range(n):
+#     list.append(int(input("请输入第{0}个数字：".format(i+1))))
+# for j in list:
+#     sum += j**3
+# print("所有数字的立方和为{0}".format(sum))
 
 # Python 计算数组元素之和
 # Python 数组翻转指定个数的元素
