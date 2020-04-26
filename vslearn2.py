@@ -896,8 +896,97 @@ import calendar
 # print("上个月的最后一天是：", pre)
 
 # Python list 常用操作
+# list = [1,2,3,4,5,6]
+# print(list[10:])
+
+# Python将dictionary转成list
+# dic = {'test': 1,'test2':2,'test3':3}
+# list = ["%s%s" % (k,v) for k,v in dic.items()]
+# print(list)
+
+# Python通过join将list转为str
+# list = ['test1', 'test22', 'test33']
+# list2 = ",".join("%s%s" % (k,v) for k,v in dic.items())
+# print(type(list2))
+# print(list2)
+# list3 = ",".join("%s" % x for x in list)
+# print(type(list3))
+# print(list3)
+# list4 = ",".join(list)
+
+# Python通过split将list分割
+# list = ['test1', 'test22', 'test33']
+# str = 'this is string example....wow!!!'
+# print(str.split())
+# print(str.split('i',1)) # 只替换第一个i
+
 # Python 约瑟夫生者死者小游戏
+"""
+30 个人在一条船上，超载，需要 15 人下船。
+
+于是人们排成一队，排队的位置即为他们的编号。
+
+报数，从 1 开始，数到 9 的人下船。
+
+如此循环，直到船上仅剩 15 人为止，问都有哪些编号的人下船了呢？
+"""
+# list,count,out,temp = [x for x in range(1,31)],1,[],0     #list是原始序列，outindex计数，temp用来承载要弹出的人的数字，out是弹出的序列
+# print("原始序列: {0}\n".format(list))
+# while len(list) > 15:
+#     if count == 9:                                        #当计数到第九个时，就弹出
+#         temp = list.pop(0)
+#         print("{0}号下船了。".format(temp))
+#         out.append(temp)
+#         count = 1
+#     else:                                                 #当计数不是9的时候，弹出并附在列表尾部做循环用
+#         list.append(list.pop(0))
+#         # print(list)
+#         count += 1
+# print("\n需要下船的序列：{0}".format(out))
+# print("最后所剩的序列：{0}".format(list))
+
+# def yoseph(people,cut,remain):
+#     """
+#     people是一共多少人，cut是去掉第几个人，remain是还剩多少人;
+#     count用来计数
+#     """
+#     list,count = [x for x in range(people+1)],1
+#     print("1、一共{0}人，去掉第{1}个人，还剩{2}人".format(people,cut,remain))
+#     print("2、将原始人数进行标记：",list)
+#     while len(list) > remain:
+#         if count == cut:
+#             list.pop(0)
+#             count = 1
+#         else:
+#             list.append(list.pop(0))
+#             count += 1
+#     return list
+
+# if __name__ == "__main__":
+#     print("3、剩下的人的标记是：{0}".format(yoseph(30,9,15)))
+   
 # Python 五人分鱼
+"""
+A、B、C、D、E 五人在某天夜里合伙去捕鱼，到第二天凌晨时都疲惫不堪，于是各自找地方睡觉。
+
+日上三杆，A 第一个醒来，他将鱼分为五份，把多余的一条鱼扔掉，拿走自己的一份;
+
+B 第二个醒来，也将鱼分为五份，把多余的一条鱼扔掉,拿走自己的一份;
+
+C、D、E依次醒来，也按同样的方法拿鱼。
+
+问他们台伙至少捕了多少条鱼?
+
+https://www.pythonf.cn/read/9297
+
+a = (x - 1)/5
+b = (a - 1)/5
+c = (b - 1)/5
+d = (c - 1)/5
+e = (d - 1)/5    最后一个人的鱼的数量能支撑x-1%5=0
+"""
+
+
 # Python 实现秒表功能
 # Python 计算 n 个自然数的立方和
 # Python 计算数组元素之和
@@ -910,7 +999,17 @@ import calendar
 # Python 复制列表
 # Python 计算元素在列表中出现的次数
 # Python 计算列表元素之和
+# list,sum = [12,15,3,10],0
+# for x in list:
+#     sum += x
+# print(sum)
+
 # Python 计算列表元素之积
+# list,multi = [12,15,3,10],1
+# for x in list:
+#     multi *= x
+# print(multi)
+
 # Python 查找列表中最小元素
 # Python 查找列表中最大元素
 # Python 移除字符串中的指定位置字符
