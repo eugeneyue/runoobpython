@@ -4,8 +4,8 @@ from math import pi
 import math,copy
 from collections import deque
 import sys
-#from fibo import fib,fib2
-#from fibo import *
+# from fibo import fib,fib2
+# from fibo import *
 import fibo
 # from datetime import date
 import datetime
@@ -930,7 +930,7 @@ import calendar
 
 如此循环，直到船上仅剩 15 人为止，问都有哪些编号的人下船了呢？
 """
-# list,count,out,temp = [x for x in range(1,31)],1,[],0     #list是原始序列，outindex计数，temp用来承载要弹出的人的数字，out是弹出的序列
+# list,count,out,temp = [x for x in range(1,31)],1,[],0     # list是原始序列，outindex计数，temp用来承载要弹出的人的数字，out是弹出的序列
 # print("原始序列: {0}\n".format(list))
 # while len(list) > 15:
 #     if count == 9:                                        #当计数到第九个时，就弹出
@@ -938,7 +938,7 @@ import calendar
 #         print("{0}号下船了。".format(temp))
 #         out.append(temp)
 #         count = 1
-#     else:                                                 #当计数不是9的时候，弹出并附在列表尾部做循环用
+#     else:                                                 # 当计数不是9的时候，弹出并附在列表尾部做循环用
 #         list.append(list.pop(0))
 #         # print(list)
 #         count += 1
@@ -987,16 +987,21 @@ e = (d * 4 - 1)/5
 
 · 全体的鱼量为total，按照分法必须满足(total-1)%5==0,否则自己和自己下面的人就没法分了。
 · 当满足条件且自己分完后，接下来的总数变成total = (total - 1)//5*4，乘以4是将每个人要分的数量汇总起来就是total了
-· 5个人循环五次，鱼从1开始推导
+· 5个人循环五次，鱼从1开始推导增加
 """
-fish = 1
-for _ in range(5):
-    if (fish - 1) % 5 == 0:
-        fish = (fish - 1) // 5 * 4
-    else:
-        fish += 1
-        break
-print(fish)
+# fish = 1
+# while True:
+#     total, enough = fish, True
+#     for _ in range(5):
+#         if (total - 1) % 5 == 0:
+#             total = (total - 1) // 5 * 4
+#         else:
+#             enough = False
+#             break
+#     if enough:
+#         print(fish)
+#         break
+#     fish += 1
 
 # Python 实现秒表功能
 # Python 计算 n 个自然数的立方和
@@ -1009,8 +1014,22 @@ print(fish)
 # print("所有数字的立方和为{0}".format(sum))
 
 # Python 计算数组元素之和
+# """
+# Python中没有数组，取而代之的是列表和元组
+# """
+# arr, sum1 = [1,2,3], 0
+# print(sum(arr))
+# for i in arr:
+#     sum1 += i
+# print(sum1)
+
 # Python 数组翻转指定个数的元素
+
 # Python 将列表中的头尾两个元素对调
+# arr = [1,2,3,4,5]
+# arr[-1], arr[0] = arr[0], arr[-1]
+# print(arr)
+
 # Python 将列表中的指定位置的两个元素对调
 # Python 翻转列表
 # Python 判断元素是否在列表中存在
@@ -1071,6 +1090,12 @@ print(fish)
 
 # Python 判断字符串是否存在子字符串
 # Python 判断字符串长度
+# string,count = 'asdfkajshdfja',0
+# print(len(string))
+# for i in string:
+#     count += 1
+# print(count)
+
 # Python 使用正则表达式提取字符串中的 URL
 # Python 将字符串作为代码执行
 # Python 字符串翻转
