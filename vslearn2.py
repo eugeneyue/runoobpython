@@ -977,15 +977,26 @@ C、D、E依次醒来，也按同样的方法拿鱼。
 
 问他们台伙至少捕了多少条鱼?
 
-https://www.pythonf.cn/read/9297
+https://www.pythonf.cn/read/9297 
 
 a = (x - 1)/5
-b = (a - 1)/5
-c = (b - 1)/5
-d = (c - 1)/5
-e = (d - 1)/5    最后一个人的鱼的数量能支撑x-1%5=0
-"""
+b = (a * 4 - 1)/5
+c = (b * 4 - 1)/5
+d = (c * 4 - 1)/5
+e = (d * 4 - 1)/5
 
+· 全体的鱼量为total，按照分法必须满足(total-1)%5==0,否则自己和自己下面的人就没法分了。
+· 当满足条件且自己分完后，接下来的总数变成total = (total - 1)//5*4，乘以4是将每个人要分的数量汇总起来就是total了
+· 5个人循环五次，鱼从1开始推导
+"""
+fish = 1
+for _ in range(5):
+    if (fish - 1) % 5 == 0:
+        fish = (fish - 1) // 5 * 4
+    else:
+        fish += 1
+        break
+print(fish)
 
 # Python 实现秒表功能
 # Python 计算 n 个自然数的立方和
