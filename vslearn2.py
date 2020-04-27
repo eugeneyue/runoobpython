@@ -1019,8 +1019,45 @@ e = (d - 1)/5    最后一个人的鱼的数量能支撑x-1%5=0
 # print(multi)
 
 # Python 查找列表中最小元素
+# list = [23,34,12,43,12,4,0,-1,4.5]
+# print(min(list))
+
 # Python 查找列表中最大元素
+# list = [23,34,12,43,12,4,0,-1,4.5]
+# print(max(list))
+
 # Python 移除字符串中的指定位置字符
+# 自己的答案
+# inputstring,templist,indexlist,corp,out,a,b,c = input("请输入原始字符串："),[],[],[],'0','','',''
+# templist,indexlist = [j for j in inputstring],[k for k in range(len(inputstring))]
+# print("以下是字母和位置的对应关系：")                                                       # 不能用字典，因为会去重
+# for m in range(len(inputstring)):
+#     a,b = str(templist[m]),str(indexlist[m])
+#     c = a+b
+#     corp.append(c)
+#     a,b,c = '','',''
+# print(corp)
+# print("请输入要移出的索引值：")
+# out = input()
+# templist.pop(int(out))
+# print("移除后的字符串是{0}".format(''.join(templist)))
+
+# 其它答案1（使用replace函数，将对应的字母替换成空）
+# inputstring = input("请输入原始字符串：")
+# out = input("请输入要移出的索引值：")
+# outputstring = inputstring.replace(inputstring[int(out)],"",1)
+# print("移出后的字符串是：{0}".format(outputstring))
+
+# 其它答案2（通过for循环遍历原始字符串到新的字符串，遇到目标索引值跳过）
+# inputstring,outstring = input("请输入原始字符串："),""
+# outindex = input("请输入要移出的索引值：")
+# for i in range(len(inputstring)):
+#     if i != int(outindex):
+#         outstring += inputstring[i]
+#     else:
+#         continue
+# print("移出后的字符串是：{0}".format(outstring))
+
 # Python 判断字符串是否存在子字符串
 # Python 判断字符串长度
 # Python 使用正则表达式提取字符串中的 URL
