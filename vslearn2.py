@@ -12,6 +12,7 @@ import datetime
 import random
 import unicodedata
 import calendar
+import time
 
 # def area(length=0,height=0):
 #     return int(length)*int(height)
@@ -1003,7 +1004,47 @@ e = (d * 4 - 1)/5
 #         break
 #     fish += 1
 
-# Python 实现秒表功能
+# Python 实现秒表功能 - 处理时间的模块
+# time模块
+# print("当前的时间戳是：",time.time())
+# time1 = time.localtime()
+# print("当前的时间元组是：",time1)
+# time2 = time.strftime("%Y-%m-%d %H:%M:%S",time.localtime())
+# print("将时间元组格式化之后：",time2)
+# time3 = '2019-06-19 13:04:14'
+# print("将格式化时间转化为元组:",time.strptime(time3,"%Y-%m-%d %H:%M:%S"))
+# print("将元组转化为时间戳:",time.mktime(time.localtime()))
+# print("年月日:",time.strftime('%Y-%m-%d'))
+# print("时分秒:",time.strftime('%H:%M:%S'))
+# datetime模块
+# year,month,day = 2020,12,24
+# time0 = datetime.date(year,month,day)
+# print("日期",time0)
+# hour,minute,second = 12,43,12
+# time1 = datetime.time(hour,minute,second)
+# print("时间",time1)
+# time2 = datetime.datetime(year,month,day)
+# print("日期时间",time2)
+# time3 = time0 + datetime.timedelta(-1)
+# print("昨天的时间",time3)
+# time4 = datetime.datetime.fromtimestamp(time.time())
+# print("将时间戳转换为格式化时间字符串:",time4)                 #datetime模块中的datetime类
+# time5 = time4.strftime("%Y-%m-%d %H:%M:%S")                 #将time4实例格式化
+# print("将时间戳转换为格式化时间字符串:",time5)
+# print(datetime.datetime.timestamp(datetime.datetime.now())) 
+# time6 = datetime.datetime.now()
+# print("将当前时间转换为时间元组：",time6.timetuple())
+# time7 = datetime.datetime.now()
+# print(time7.date().strftime('%Y-%m-%d'))
+# time8 = datetime.datetime.now()
+# print(time7.time().strftime('%H:%M:%S'))
+# time1 = time.time()
+# print(time1)
+# time.sleep(2.5)
+# time2 = time.time()
+# time3 = time2 - time1
+# print("间隔时间：{0}秒".format(round(time3,2)))
+
 # Python 计算 n 个自然数的立方和
 # n = int(input("请输入要输入的自然数的数量："))
 # list,sum = [],0
@@ -1071,13 +1112,11 @@ e = (d * 4 - 1)/5
 # out = input()
 # templist.pop(int(out))
 # print("移除后的字符串是{0}".format(''.join(templist)))
-
 # 其它答案1（使用replace函数，将对应的字母替换成空）
 # inputstring = input("请输入原始字符串：")
 # out = input("请输入要移出的索引值：")
 # outputstring = inputstring.replace(inputstring[int(out)],"",1)
 # print("移出后的字符串是：{0}".format(outputstring))
-
 # 其它答案2（通过for循环遍历原始字符串到新的字符串，遇到目标索引值跳过）
 # inputstring,outstring = input("请输入原始字符串："),""
 # outindex = input("请输入要移出的索引值：")
