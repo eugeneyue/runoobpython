@@ -1178,7 +1178,22 @@ list2 = copy.deepcopy(list1)
 #         continue
 # print("移出后的字符串是：{0}".format(outstring))
 
-# Python 判断字符串是否存在子字符串
+# Python 给定一个字符串，然后判断指定的子字符串是否存在于该字符串中
+# 方法一
+# pre_string = 'www.runoob.com'
+# in_string = input("请输入子字符串:")
+# if in_string in pre_string:
+#     print("存在！")
+# else:
+#     print("不存在！")
+# 方法二
+# pre_string = 'www.runoob.com'
+# in_string = input("请输入子字符串:")
+# if (pre_string.find(in_string)) == 0:                           # Find函数，如果找到了就返回0，找不到就返回-1
+#     print("存在！")
+# else:
+#     print("不存在！")
+
 # Python 判断字符串长度
 # string,count = 'asdfkajshdfja',0
 # print(len(string))
@@ -1188,15 +1203,46 @@ list2 = copy.deepcopy(list1)
 
 # Python 使用正则表达式提取字符串中的 URL
 # Python 将字符串作为代码执行
+
 # Python 字符串翻转
-# Python 对字符串切片及翻转
+# string = 'dfsflaskjdfl'
+# print(string[::-1])
+# print(''.join(reversed(string)))
+
+# Python 给定一个字符串，从头部或尾部截取指定数量的字符串，然后将其翻转拼接
+# string = 'abcdefghijk'
+# print(string)
+# cutpos = int(input("从左至右，请输入终止位置："))
+# cut = string[cutpos-1::-1]
+# rest = string[cutpos::]
+# print(cut)
+# print(rest)
+# print(cut+rest)
+
 # Python 按键(key)或值(value)对字典进行排序
 # Python 计算字典值之和
 # Python 移除字典点键值(key/value)对
 # Python 合并字典
+
 # Python 将字符串的时间转换为时间戳
+# nowtime = '2019-12-12 12:22:30'
+# nowtime = datetime.datetime.strptime(nowtime,"%Y-%m-%d %H:%M:%S")                       # 先转换为时间数组
+# result = datetime.datetime.timestamp(nowtime)
+# print(result)
+
 # Python 获取几天前的时间
+# today = datetime.datetime.now()
+# print("当前日期是：{0}".format(today.strftime("%Y-%m-%d")))
+# delta = int(input("请输入获取几天，当前时间之前的请使用负数："))
+# result = (today + datetime.timedelta(delta)).strftime("%Y-%m-%d")
+# print("时间为：{0}".format(result))
+
 # Python 将时间戳转换为指定格式日期
+# nowtimestamp = time.time()
+# print("当前时间戳是：{0}".format(nowtimestamp))
+# nowtimestring = datetime.datetime.fromtimestamp(nowtimestamp)
+# print(nowtimestring.strftime("%Y-%m-%d %H:%M:%S"))
+
 # Python 打印自己设计的字体
 # Python 二分查找
 # Python 线性查找
