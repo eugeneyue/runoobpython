@@ -1220,8 +1220,28 @@ list2 = copy.deepcopy(list1)
 # print(cut+rest)
 
 # Python 按键(key)或值(value)对字典进行排序
+# 按键(key)排序
+# dict = {'a':100, 'b':200, 'c':300}
+
+
 # Python 计算字典值之和
+# dict,sum = {'a':100, 'b':200, 'c':300},0
+# for v in dict.values():
+#     sum += v
+# print(sum)
+
 # Python 移除字典点键值(key/value)对
+# dict = {'a':100, 'b':200, 'c':300}
+# 使用pop
+# dict.pop('c')
+# print(dict)
+# 使用del
+# del dict['ac']
+# print(dict)
+# 使用items，遍历
+# new_dict = {key:value for key,value in dict.items() if key != 'a'}
+# print(new_dict)
+
 # Python 合并字典
 
 # Python 将字符串的时间转换为时间戳
