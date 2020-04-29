@@ -1072,11 +1072,62 @@ e = (d * 4 - 1)/5
 # print(arr)
 
 # Python 将列表中的指定位置的两个元素对调
+# 方法一
+# arr = [1,2,3,4,5]
+# arr[0],arr[-1] = arr[-1],arr[0]
+# print(arr)
+#方法二
+# a,b,fir_ele,sec_ele = 1,3,0,0
+# arr = [1,2,3,4,5]
+# fir_ele = arr.pop(a-1)
+# sec_ele = arr.pop(b-2)
+# arr.insert(b-1, fir_ele)
+# arr.insert(a-1, sec_ele)
+# print(arr)
+
 # Python 翻转列表
+# arr = [1,2,3,4,5]
+# print(arr[::-1])
+# arr.reverse()
+# print(arr)
+
 # Python 判断元素是否在列表中存在
+# arr = [1,2,3,4,5]
+# result,num = True,int(input("请输入要判断的数字："))
+# if num in arr:
+#     print("在！")
+# else:
+#     print("不在！")
+
 # Python 清空列表
+# arr.clear()
+
 # Python 复制列表
+"""
+字典的复制方式
+1、三种方式，第一种是=，第二种是copy，第三种是deepcopy
+2、B=A，如果A变了，B也会跟着变
+3、B=A.copy()，如果A变了，B中的父对象不变，但是子对象会跟着A变
+4、B=A.deepcopy()，如果A变了，B不变
+
+dict2 = copy.deepcopy(dict2)
+list2 = copy.deepcopy(list1)
+"""
+# arr1,arr2 = [1,2,3,4,5],[]
+# arr2 = copy.deepcopy(arr1)
+# print(arr2)
+
 # Python 计算元素在列表中出现的次数
+# 自己的答案
+# inputlist,count = [12,3,34,3,412,4,3,1,3,4,0,1,3,4,3],0
+# checknum = int(input("请输入要检查的数字:"))
+# for i in inputlist:
+#     if i == checknum:
+#         count += 1
+#     else:
+#         pass
+# print("该数字一共出现了{0}次".format(count))
+
 # Python 计算列表元素之和
 # list,sum = [12,15,3,10],0
 # for x in list:
@@ -1101,7 +1152,7 @@ e = (d * 4 - 1)/5
 # 自己的答案
 # inputstring,templist,indexlist,corp,out,a,b,c = input("请输入原始字符串："),[],[],[],'0','','',''
 # templist,indexlist = [j for j in inputstring],[k for k in range(len(inputstring))]
-# print("以下是字母和位置的对应关系：")                                                       # 不能用字典，因为会去重
+# print("以下是字母和位置的对应关系：")                                                                      # 不能用字典，因为会去重
 # for m in range(len(inputstring)):
 #     a,b = str(templist[m]),str(indexlist[m])
 #     c = a+b
