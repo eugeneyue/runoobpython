@@ -931,7 +931,7 @@ import time
 
 如此循环，直到船上仅剩 15 人为止，问都有哪些编号的人下船了呢？
 """
-# list,count,out,temp = [x for x in range(1,31)],1,[],0     # list是原始序列，outindex计数，temp用来承载要弹出的人的数字，out是弹出的序列
+# list,count,out,temp = [x for x in range(1,31)],1,[],0     # list是原始序列，count计数，temp用来承载要弹出的人的数字，out是弹出的序列
 # print("原始序列: {0}\n".format(list))
 # while len(list) > 15:
 #     if count == 9:                                        #当计数到第九个时，就弹出
@@ -1263,13 +1263,50 @@ list2 = copy.deepcopy(list1)
 # nowtimestring = datetime.datetime.fromtimestamp(nowtimestamp)
 # print(nowtimestring.strftime("%Y-%m-%d %H:%M:%S"))
 
-# Python 打印自己设计的字体
-# Python 二分查找
+# Python 二分查找 时间复杂度为O(log2n)，效率最高
+"""
+二分搜索是一种在有序数组中查找某一特定元素的搜索算法。
+搜索过程从数组的中间元素开始，如果中间元素正好是要查找的元素，则搜索过程结束；如果某一特定元素大于或者小于中间元素，则在数组大于或小于中间元素的那一半中查找，而且跟开始一样从中间元素开始比较。
+如果在某一步骤数组为空，则代表找不到。这种搜索算法每一次比较都使搜索范围缩小一半。
+
+可以基于下标做文章 - 如果组成一个新的列表，原先的下标就会丢失
+但是要注意索引下标是从0开始的，但是数字的总和数量是10个
+"""
+def binarysearch(seeknum):
+    list1 = [-1, 0, 1, 4, 5, 12, 13, 15, 32, 35, 37]
+    min,max = 0,len(list1)                               # 数字的总和数量是10个
+    while min < max:
+        mid = (min + max)//2
+        if list1[mid] == seeknum:
+            print("目标索引值是{0}".format(mid))
+        elif seeknum < list1[mid]:
+            max = mid - 1
+        else:
+            min = mid + 1
+    return "不在列表中"
+if __name__ == "__main__":
+    search = int(input("请输入要查找的数字："))
+    print(binarysearch(search))
+
 # Python 线性查找
 # Python 插入排序
 # Python 快速排序
 # Python 选择排序
-# Python 冒泡排序
+# Python 冒泡排序 时间复杂度为O(n**2)
+"""
+冒泡排序（Bubble Sort）也是一种简单直观的排序算法。它重复地走访过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。
+走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。这个算法的名字由来是因为越小的元素会经由交换慢慢"浮"到数列的顶端。
+
+假设5个数，要比较4个回合，每一个回合要比较的次数从4次逐一递减到1次
+"""
+# list = [13,15,1,32,5,12,35,4,0,-1]
+# n = len(list)
+# for i in range(n):
+#     for j in range(n-i-1):
+#         if list[j] > list[j+1]:
+#             list[j],list[j+1] = list[j+1],list[j]
+# print(list)
+
 # Python 归并排序
 # Python 堆排序
 # Python 计数排序
