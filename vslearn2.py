@@ -13,6 +13,7 @@ import random
 import unicodedata
 import calendar
 import time
+import re
 
 # def area(length=0,height=0):
 #     return int(length)*int(height)
@@ -1202,7 +1203,25 @@ list2 = copy.deepcopy(list1)
 # print(count)
 
 # Python 使用正则表达式提取字符串中的 URL
-# Python 将字符串作为代码执行
+# def find(link):
+#     # findall() 查找匹配正则表达式的字符串
+#     url = re.findall('https?://(?:[-\w.]|(?:%[\da-fA-F]{2}))+',link)                    # 返回列表
+#     return url
+# string = 'Runoob 的网页地址为：https://www.runoob.com，Google 的网页地址为：https://www.google.com'
+# print("URLs:", find(string))
+
+# Python 将字符串作为代码执行>>>给定一个字符串代码，然后使用 exec() 来执行字符串代码。
+# def exec_code():
+#     LOC = """
+# def factorial(num):
+#     result = 1
+#     for i in range(1,num+1):
+#         result *= i
+#     return result
+# print(factorial(5))
+# """
+#     exec(LOC)
+# exec_code()
 
 # Python 字符串翻转
 # string = 'dfsflaskjdfl'
@@ -1222,7 +1241,6 @@ list2 = copy.deepcopy(list1)
 # Python 按键(key)或值(value)对字典进行排序
 # 按键(key)排序
 # dict = {'a':100, 'b':200, 'c':300}
-
 
 # Python 计算字典值之和
 # dict,sum = {'a':100, 'b':200, 'c':300},0
@@ -1263,6 +1281,7 @@ list2 = copy.deepcopy(list1)
 # nowtimestring = datetime.datetime.fromtimestamp(nowtimestamp)
 # print(nowtimestring.strftime("%Y-%m-%d %H:%M:%S"))
 
+<<<<<<< HEAD
 # Python 二分查找 时间复杂度为O(log2n)，效率最高
 """
 二分搜索是一种在有序数组中查找某一特定元素的搜索算法。
@@ -1288,6 +1307,9 @@ if __name__ == "__main__":
     search = int(input("请输入要查找的数字："))
     print(binarysearch(search))
 
+=======
+# Python 二分查找
+>>>>>>> 299372e87257932cf4d99178ee9cbac868a8b385
 # Python 线性查找
 # Python 插入排序
 # Python 快速排序
