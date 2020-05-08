@@ -14,6 +14,7 @@ import unicodedata
 import calendar
 import time
 import re
+import numpy as np
 
 # def area(length=0,height=0):
 #     return int(length)*int(height)
@@ -1334,24 +1335,99 @@ list2 = copy.deepcopy(list1)
 #     search = int(input("请输入要查找的数字："))
 #     print(binarysearch(manage(beflist),search))
 
-# Python 二分查找
 # Python 线性查找
+# """
+# 线性查找指按一定的顺序检查数组中每一个元素，直到找到所要寻找的特定值为止。
+# """
+# beflist = [-1, 0, 1, 45, 5, 12, 13, 15, 32, 35, 37]
+# search,count,length = int(input("请输入要查找的数字：")),0,len(beflist)
+# for x in beflist:
+#     if search == x:
+#         print("存在该数，其索引值为%d" % count)
+#     elif count == length-1:
+#         print("不存在该数")
+#     else:
+#         count += 1
+
 # Python 插入排序
-# Python 快速排序
+"""
+插入排序（英语：Insertion Sort）是一种简单直观的排序算法。
+它的工作原理是通过构建有序序列，对于未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。
+"""
+# randomlist = [x for x in np.random.randint(10,size=10)]
+# print("原始列表: {0}".format(randomlist))
+# for x in range(1,len(randomlist)):
+#     y = x
+#     while y > 0:
+#         if randomlist[y] < randomlist[y-1]:
+#             randomlist[y],randomlist[y-1] = randomlist[y-1],randomlist[y]
+#         else:
+#             y -= 1
+# print("排序后的列表：{0}".format(randomlist))
+
+# Python 快速排序 高快省的排序算法
+"""
+快速排序使用分治法（Divide and conquer）策略来把一个序列（list）分为较小和较大的2个子序列，然后递归地排序两个子序列。
+
+步骤为：
+· 挑选基准值：从数列中挑出一个元素，称为"基准"（pivot）;
+· 分割：重新排序数列，所有比基准值小的元素摆放在基准前面，所有比基准值大的元素摆在基准后面（与基准值相等的数可以到任何一边）。在这个分割结束之后，对基准值的排序就已经完成;
+· 递归排序子序列：递归地将小于基准值元素的子序列和大于基准值元素的子序列排序。
+· 递归到最底部的判断条件是数列的大小是零或一，此时该数列显然已经有序。
+
+选取基准值有数种具体方法，此选取方法对排序的时间性能有决定性影响。
+"""
+# def quick_sort(list1):
+#     if len(list1) < 2:
+#         return list1
+#     left,right = [],[]
+#     mid = list1[len(list1) // 2]                  # 可以选择中间值为pivot，也可以选择其他，比如list1[0]
+#     list1.remove(mid)
+#     for i in list1:
+#         if i <= mid:
+#             left.append(i)
+#         else:
+#             right.append(i)
+#     return quick_sort(left) + [mid] + quick_sort(right)
+
+# if __name__ == "__main__":
+#     start = time.time()
+#     randomlist = [x for x in np.random.randint(1000,size=1111)]
+#     print("原始列表: {0}".format(randomlist))
+#     # randomlist = [65, 50, 5, 41, 35, 54, 34, 94, 97, 19, 99, 95, 86, 75, 42, 54, 65, 96, 66, 58, 62, 16, 41, 25, 29, 23, 92, 56, 39, 49, 20, 95, 8, 91, 32, 66, 15, 52, 31, 9, 70, 31, 81, 49, 91, 96, 69, 93, 0, 3, 14, 97, 66, 90, 36, 68, 39, 4, 86, 24, 64, 8, 17, 81, 53, 56, 68, 40, 51, 13, 1, 23, 3, 83, 81, 11, 57, 13, 25, 93, 43, 27, 1, 62, 92, 62, 4, 42, 35, 55, 9, 71, 57, 87, 0, 49, 38, 0, 50, 37, 25, 75, 45, 27, 44, 44, 94, 92, 53, 59, 34]
+#     end = time.time()
+#     print(end-start)
+
 # Python 选择排序
+"""
+选择排序（Selection sort）是一种简单直观的排序算法。
+它的工作原理如下。首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置，然后，再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。
+以此类推，直到所有元素均排序完毕。
+
+先假设起始值最小，将此值与后面的值一一比较，再找到最小的值，后再与起始值互换。
+"""
+# randomlist = [x for x in np.random.randint(10,size=11)]
+# print("原始列表: {0}".format(randomlist))
+# for i in range(len(randomlist)):
+#     min = i
+#     for j in range(i+1,len(randomlist)):
+#         if randomlist[min] > randomlist[j]:
+#             min = j                                                             # 如果起始值大于被比较值，就把两者下标替换，被比较值作为新的起始值
+#     randomlist[min],randomlist[i] = randomlist[i],randomlist[min]               # 一轮比较过后得到的新的起始值，与原有的值替换
+# print("选择排序：{0}".format(randomlist)) 
+
 # Python 冒泡排序 时间复杂度为O(n**2)
 """
 冒泡排序（Bubble Sort）也是一种简单直观的排序算法。它重复地走访过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。
 走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。这个算法的名字由来是因为越小的元素会经由交换慢慢"浮"到数列的顶端。
 
-假设5个数，要比较4个回合，每一个回合要比较的次数从4次逐一递减到1次
+假设5个数，要比较4个回合，每一个回合要比较的次数从4次逐一递减到1次，递减的值可以直接借鉴i
 """
 # list = [13,15,1,32,5,12,35,4,0,-1]
 # n = len(list)
 # for i in range(n):
 #     for j in range(n-i-1):
-#         if list[j] > list[j+1]:
-#             list[j],list[j+1] = list[j+1],list[j]
+#         if list[j] > list[j+1]: list[j],list[j+1] = list[j+1],list[j]
 # print(list)
 
 # Python 归并排序
