@@ -1474,14 +1474,18 @@ list2 = copy.deepcopy(list1)
 #     print("原始列表: {0}".format(randomlist))
 #     print("归并排序：{0}".format(merge_sort(randomlist)))
 
-# Python 堆排序
-# Python 计数排序
-# Python 希尔排序
-# Python 拓扑排序
-
 #---------------------------------------------------------------------------------------------------------
-a,b,list1 = 0,1,[]
-while len(list1) <= 10:
-    list1.append(a)
-    a,b = b,a+b
-print(list1)
+"""
+Runoob Python测验
+1、Python的数据类型
+可变：list/set/dictionary
+不可变：string/number/tuple
+
+2、获取变量的类型：type(xxx)
+
+3、str.replace(old,new,count)
+
+4、def f(): pass
+   print(type(f()))
+   >>> 
+"""
