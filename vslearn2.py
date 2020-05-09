@@ -1431,9 +1431,57 @@ list2 = copy.deepcopy(list1)
 # print(list)
 
 # Python 归并排序
+"""
+归并排序（MERGE-SORT）是利用归并的思想实现的排序方法，该算法采用经典的分治（divide-and-conquer）策略.
+· 先通过不断的递归调用自己，一直拆分成单个元素的时候就返回这个元素，不再拆分
+· 然后将拆分出的两个列表，依次取数据进行比较后返回
+"""
+# def merge_sort(list1):
+#     """
+#     先拆分，后调用merge函数进行合并
+#     """
+#     if len(list1) < 2:
+#         return list1
+#     mid = len(list1)//2
+#     left,right = list1[:mid],list1[mid:]
+#     # print("left: {0}".format(left))
+#     # print("right: {0}".format(right))
+#     ll,rl = merge_sort(left),merge_sort(right)      # 最后一次递归时，ll和rl会接收到只有一个元素的列表；最后一次之前会接收到子序列
+#     # print("ll: {0}".format(ll))
+#     # print("rl: {0}".format(rl))
+#     return merge(ll,rl)
+
+# def merge(left,right):
+#     """
+#     合并用，为merge_sort服务
+#     """
+#     result = []
+#     while len(left)>0 and len(right)>0:
+#         if left[0] <= right[0]:
+#             result.append(left.pop(0))
+#         else:
+#             result.append(right.pop(0))
+#     # print("merge_left: {0}".format(left))
+#     # print("merge_right: {0}".format(right))
+#     result += left
+#     result += right
+#     # print("merge_result: {0}".format(result))
+#     return result
+
+# if __name__ == "__main__":
+#     # randomlist = [x for x in np.random.randint(10,size=11)]
+#     randomlist = [9,4,8,2,3]
+#     print("原始列表: {0}".format(randomlist))
+#     print("归并排序：{0}".format(merge_sort(randomlist)))
+
 # Python 堆排序
 # Python 计数排序
 # Python 希尔排序
 # Python 拓扑排序
 
 #---------------------------------------------------------------------------------------------------------
+a,b,list1 = 0,1,[]
+while len(list1) <= 10:
+    list1.append(a)
+    a,b = b,a+b
+print(list1)
