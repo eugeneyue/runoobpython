@@ -1487,5 +1487,16 @@ Runoob Python测验
 
 4、def f(): pass
    print(type(f()))
-   >>> 
+   >>> <class 'Nonetype'>
+
+5、try...except...
 """
+
+#---------------------------------------------------------------------------------------------------------
+
+import hashlib
+"""
+MD5(app_id=1&company_id=1170&sign_time=时间戳&third_name=21tb&user_id=1226secret_key=8UyEP6gbrGA4s5Vn)
+"""
+result = hashlib.md5(b'app_id=1&company_id=1170&sign_time=1589248213&third_name=21tb&user_id=1226&secret_key=8UyEP6gbrGA4s5Vn').hexdigest()
+print(result)
